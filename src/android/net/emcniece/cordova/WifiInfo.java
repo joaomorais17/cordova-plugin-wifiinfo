@@ -231,7 +231,7 @@ public class WifiInfo extends CordovaPlugin {
         obj.put("hidden", info.getHiddenSSID());
         obj.put("ip", ipToString(info.getIpAddress()));
         obj.put("speed", info.getLinkSpeed());
-        obj.put("MaxSupportedTxLinkSpeed", info.getMaxSupportedTxLinkSpeedMbps());
+        //obj.put("MaxSupportedTxLinkSpeed", info.getMaxSupportedTxLinkSpeedMbps());
         //obj.put("MaxSupportedRxLinkSpeed", info.getMaxSupportedRxLinkSpeedMbps());
         obj.put("mac", macAddress);
         obj.put("rssi", info.getRssi());
