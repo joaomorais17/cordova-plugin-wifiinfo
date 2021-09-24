@@ -232,12 +232,11 @@ public class WifiInfo extends CordovaPlugin {
         obj.put("ip", ipToString(info.getIpAddress()));
         obj.put("speed", info.getLinkSpeed());
         //obj.put("MaxSupportedTxLinkSpeed", info.getMaxSupportedTxLinkSpeedMbps());
-        try {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) { /*Check if Android version is greater or equal than Android 11*/
             obj.put("maxSupportedRxLinkSpeed", info.getMaxSupportedRxLinkSpeedMbps());
-        }catch (Exception e) {
+        } else {
             obj.put("maxSupportedRxLinkSpeed", "NOT_AVAILABLE");
-        }
-        
+        }        
         obj.put("mac", macAddress);
         obj.put("rssi", info.getRssi());
         obj.put("ssid", info.getSSID());
