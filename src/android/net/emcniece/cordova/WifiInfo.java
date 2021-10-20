@@ -235,7 +235,7 @@ public class WifiInfo extends CordovaPlugin {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) { /*Check if Android version is greater or equal than Android 11*/
             obj.put("maxSupportedRxLinkSpeed", info.getMaxSupportedRxLinkSpeedMbps());
         } else {
-            obj.put("maxSupportedRxLinkSpeed", 10 );
+            obj.put("maxSupportedRxLinkSpeed", null );
         }        
         obj.put("mac", macAddress);
         obj.put("rssi", info.getRssi());
