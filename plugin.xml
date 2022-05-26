@@ -27,7 +27,7 @@
         <source-file src="src/android/net/emcniece/cordova/WifiInfo.java" target-dir="src/net/emcniece/cordova" />
     </platform>
 
-    <platform name="ios">
+     <platform name="ios">
         <js-module src="www/wifiinfo.js" name="WifiInfo">
             <clobbers target="cordova.plugins.wifiinfo" />
         </js-module>
